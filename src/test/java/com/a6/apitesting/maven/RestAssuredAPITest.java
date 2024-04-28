@@ -15,7 +15,9 @@ public class RestAssuredAPITest {
     // Specify the base URL to the RESTful web service 
     RestAssured.baseURI = "https://dummyapi.io/data/v1/"; 
     // Get the RequestSpecification of the request to be sent to the server. 
-    RequestSpecification httpRequest = RestAssured.given().header("app-id", "662c780dc102e9ec916fdfdf");
+    RequestSpecification httpRequest = RestAssured.given();
+    // Set the request header
+    httpRequest.header("app-id", "662c780dc102e9ec916fdfdf");
     // Set the content type of the request body
     httpRequest.contentType(ContentType.JSON);
     // Define the request body (JSON format)
