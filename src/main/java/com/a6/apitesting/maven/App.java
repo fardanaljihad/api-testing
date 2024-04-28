@@ -1,4 +1,4 @@
-package kelompok.a6.maven;
+package com.a6.apitesting.maven;
 
 /**
  * Hello world!
