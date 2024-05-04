@@ -1,4 +1,4 @@
-package com.a6.apitesting.maven;
+package com.a6.apitesting.maven.tests.userContoller;
 
 import org.junit.Test;
 
