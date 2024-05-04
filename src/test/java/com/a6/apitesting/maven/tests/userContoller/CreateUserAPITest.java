@@ -1,34 +1,110 @@
 package com.a6.apitesting.maven.tests.userContoller;
 
-import org.junit.Test;
+import com.a6.apitesting.maven.config.APIConfig;
+import com.a6.apitesting.maven.utils.TestUtilities;
 
 import io.restassured.RestAssured;
-import io.restassured.http.ContentType;
-import io.restassured.http.Method;
 import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
+
+import java.io.IOException;
+
+import org.junit.Test;
+
 
 public class CreateUserAPITest {
-    
-      @Test
-  public void CreateUser() {
-    // Specify the base URL to the RESTful web service 
-    RestAssured.baseURI = "https://dummyapi.io/data/v1/"; 
-    // Get the RequestSpecification of the request to be sent to the server. 
-    RequestSpecification httpRequest = RestAssured.given();
-    // Set the request header
-    httpRequest.header("app-id", "662c780dc102e9ec916fdfdf");
-    // Set the content type of the request body
-    httpRequest.contentType(ContentType.JSON);
-    // Define the request body (JSON format)
-    String requestBody = "{\"firstName\": \"John\", \"lastName\": \"Doe\", \"email\": \"johndoe100@example.com\"}";
-    // Set the request body
-    httpRequest.body(requestBody);
-    // specify the method type and the parameters if any. 
-    //In this case the request does not take any parameters 
-    Response response = httpRequest.request(Method.POST, "/user/create");
-    // Print the status and message body of the response received from the server 
-    System.out.println("Status received => " + response.getStatusLine()); 
-    System.out.println("Response=>" + response.prettyPrint());
-  }
+
+    // Test case to create a new user with valid field
+    @Test
+    public void testCreateUserWithValidField() throws IOException{
+        String filePath = "src/test/resources/testdata/userCreationDataTC01-Data.json";
+        String jsonBody = TestUtilities.loadJsonFromFile(filePath);
+        Response response = RestAssured.given()
+                                       .spec(APIConfig.getDefaultRequestSpecification())
+                                       .body(jsonBody)
+                                       .post("/user/create");
+        // Now validate the response
+        response.then()
+                .assertThat()
+                .statusCode(200)
+                .body(matchesJsonSchemaInClasspath("testdata/userCreationData-Schema1.json"));
+
+        // Print the status and message body of the response received from the server
+        System.out.println("Status received => " + response.getStatusLine());
+        System.out.println("Response=>" + response.prettyPrint());
+    }
+
+    // Test case to create a new user with empty field
+    @Test
+    public void testCreateUserWithEmptyField() throws IOException{
+        String filePath = "src/test/resources/testdata/userCreationDataTC02-Data.json";
+        String jsonBody = TestUtilities.loadJsonFromFile(filePath);
+        Response response = RestAssured.given()
+                                       .spec(APIConfig.getDefaultRequestSpecification())
+                                       .body(jsonBody)
+                                       .post("/user/create");
+        response.then()
+                .assertThat()
+                .statusCode(400)
+                .body(matchesJsonSchemaInClasspath("testdata/userCreationData-Schema1.json"));
+
+        System.out.println("Status received => " + response.getStatusLine());
+        System.out.println("Response=>" + response.prettyPrint());
+    }
+
+    // Test case to create a new user with existing email
+    @Test
+    public void testCreateUserWithExitingEmail() throws IOException{
+        String filePath = "src/test/resources/testdata/userCreationDataTC03-Data.json";
+        String jsonBody = TestUtilities.loadJsonFromFile(filePath);
+        Response response = RestAssured.given()
+                                       .spec(APIConfig.getDefaultRequestSpecification())
+                                       .body(jsonBody)
+                                       .post("/user/create");
+        // Now validate the response
+        response.then()
+                .assertThat()
+                .statusCode(400)
+                .body(matchesJsonSchemaInClasspath("testdata/userCreationData-Schema1.json"));
+
+        // Print the status and message body of the response received from the server
+        System.out.println("Status received => " + response.getStatusLine());
+        System.out.println("Response=>" + response.prettyPrint());
+    }
+
+    // Test case to create a new user with empty firstname
+    @Test
+    public void testCreateUserWithEmptyFirstname() throws IOException{
+        String filePath = "src/test/resources/testdata/userCreationDataTC04-Data.json";
+        String jsonBody = TestUtilities.loadJsonFromFile(filePath);
+        Response response = RestAssured.given()
+                                       .spec(APIConfig.getDefaultRequestSpecification())
+                                       .body(jsonBody)
+                                       .post("/user/create");
+        response.then()
+                .assertThat()
+                .statusCode(400)
+                .body(matchesJsonSchemaInClasspath("testdata/userCreationData-Schema1.json"));
+
+        System.out.println("Status received => " + response.getStatusLine());
+        System.out.println("Response=>" + response.prettyPrint());
+    }
+
+    // Test case to create a new user with empty lastname
+    @Test
+    public void testCreateUserWithEmptyLastname() throws IOException{
+        String filePath = "src/test/resources/testdata/userCreationDataTC05-Data.json";
+        String jsonBody = TestUtilities.loadJsonFromFile(filePath);
+        Response response = RestAssured.given()
+                                       .spec(APIConfig.getDefaultRequestSpecification())
+                                       .body(jsonBody)
+                                       .post("/user/create");
+        response.then()
+                .assertThat()
+                .statusCode(400)
+                .body(matchesJsonSchemaInClasspath("testdata/userCreationData-Schema1.json"));
+
+        System.out.println("Status received => " + response.getStatusLine());
+        System.out.println("Response=>" + response.prettyPrint());
+    }
 }
