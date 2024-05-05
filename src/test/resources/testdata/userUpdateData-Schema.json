@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "dateOfBirth": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "picture": {
+      "type": "string",
+      "format": "uri"
+    },
+    "location": {
+      "type": "object",
+      "properties": {
+        "street": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "timezone": {
+          "type": "string"
+        }
+      }
+    },
+    "registerDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updateDate": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

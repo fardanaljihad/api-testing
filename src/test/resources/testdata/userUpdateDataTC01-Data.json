@@ -1,0 +1,15 @@
+{
+  "title": "mrs",
+  "firstName": "Hasta",
+  "lastName": "Lafista",
+  "gender": "female",
+  "email": "lafista@gmail.com",
+  "dateOfBirth": "2003-05-26T08:27:48.279Z",
+  "location": {
+    "street": "02, sesama street",
+    "city": "Cool",
+    "state": "Frozen",
+    "country": "Antartika",
+    "timezone": "0:00"
+  }
+}
