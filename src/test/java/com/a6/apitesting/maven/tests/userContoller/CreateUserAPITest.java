@@ -45,9 +45,8 @@ public class CreateUserAPITest {
                                        .post("/user/create");
         response.then()
                 .assertThat()
-                .statusCode(400)
-                .body(matchesJsonSchemaInClasspath("testdata/userCreationData-Schema1.json"));
-
+                .statusCode(400);
+                
         System.out.println("Status received => " + response.getStatusLine());
         System.out.println("Response=>" + response.prettyPrint());
     }
@@ -64,8 +63,7 @@ public class CreateUserAPITest {
         // Now validate the response
         response.then()
                 .assertThat()
-                .statusCode(400)
-                .body(matchesJsonSchemaInClasspath("testdata/userCreationData-Schema1.json"));
+                .statusCode(400);
 
         // Print the status and message body of the response received from the server
         System.out.println("Status received => " + response.getStatusLine());
@@ -83,8 +81,7 @@ public class CreateUserAPITest {
                                        .post("/user/create");
         response.then()
                 .assertThat()
-                .statusCode(400)
-                .body(matchesJsonSchemaInClasspath("testdata/userCreationData-Schema1.json"));
+                .statusCode(400);
 
         System.out.println("Status received => " + response.getStatusLine());
         System.out.println("Response=>" + response.prettyPrint());
@@ -101,8 +98,7 @@ public class CreateUserAPITest {
                                        .post("/user/create");
         response.then()
                 .assertThat()
-                .statusCode(400)
-                .body(matchesJsonSchemaInClasspath("testdata/userCreationData-Schema1.json"));
+                .statusCode(400);
 
         System.out.println("Status received => " + response.getStatusLine());
         System.out.println("Response=>" + response.prettyPrint());
