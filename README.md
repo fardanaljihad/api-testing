@@ -1,5 +1,29 @@
 # API Testing
 
+
+| No  | Test Case Name                                                    | Modul Test Name                       |
+| :-- | :---------------------------------------------------------------- | :------------------------------------ |
+| 1.  | Get user dengan kondisi tidak ada app-id | GetUserWithNoAppId      |
+| 2.  | Get user dengan kondisi app-id tidak valid  | GetUserWithAppIdInvalid     |
+| 3.  | Get user dengan kondisi  app-id dan id user valid                     | GetUserWithAppIdAndUserIdValid      |
+| 4.  | Get user dengan kondisi tidak ada ada user id           | GetUserWithUserIdNotExist       |
+| 5.  | Get user dengan kondisi user id tidak valid           | GetUserWithUserIdInvalid           |
+| 6.  | Delete user dengan kondisi tidak ada app-id         | DeleteUserWithNoApiId           |
+| 7.  | Delete user dengan kondisi app-id tidak valid        | DeleteUserWithAppIdInvalid           |
+| 8.  | Delete user dengan kondisi  app-id dan id user valid        | DeleteUserWithAppIdAndUserIdValid |
+| 9.  | Delete user dengan kondisi tidak ada ada user id           | DeleteUserWithUserIdNotExist           |
+| 10. | Delete user dengan kondisi user id tidak valid                   | DeleteUserWithUserIdInvalid            |
+| 11. | Create user dengan field yang valid | testCreateUserWithValidField      |
+| 12. | Create user dengan semua field kosong  | testCreateUserWithEmptyField     |
+| 13. | Create user menggunakan email yang sudah terdaftar                      | testCreateUserWithExitingEmail      |
+| 14. | Create user dengan field firstname kosong          | testCreateUserWithEmptyFirstname       |
+| 15. | Create user dengan field lastname kosong          | testCreateUserWithEmptyLastname           |
+| 16. | Update user dengan kondisi parameter id user kosong         | testUpdateUserWithEmptyUserIdParameter           |
+| 17. | Update user dengan kondisi id user valid dan field Firstname yang panjang     | testUpdateUserWithValidUserIdAndLongFirstname           |
+| 18. | Update user dengan kondisi id user valid dan field Lastname yang panjang        | testUpdateUserWithValidUserIdAndLongLastname |
+| 19. | Update user dengan kondisi id user valid dan title valid        | testUpdateUserWithValidUserIdAndTitle           |
+| 20. |  Update user dengan kondisi id user valid dan gender valid                    | testUpdateUserWithValidUserIdAndGender            |
+
 ## How to run test cases
 
 1. Open the terminal by pressing `Ctrl + Shift + ~`.
