@@ -95,4 +95,24 @@ public class UpdateUserAPITest {
     System.out.println("Status received => " + response.getStatusLine());
     System.out.println("Response body =>" + response.prettyPrint());
   }
+
+  // Test case to update gender. TC16
+  @Test
+  public void testUpdateUserWithValidUserIdAndGender() throws IOException{
+    String filePath = "src/test/resources/testdata/userUpdateDataTC05-Data.json";
+    String jsonBody = TestUtilities.loadJsonFromFile(filePath);
+    Response response = RestAssured.given()
+                                    .spec(APIConfig.getDefaultRequestSpecification())
+                                    .body(jsonBody)
+                                    .put("/user/" + USER_ID);
+    // Now validate the response
+    response.then()
+            .assertThat()
+            .statusCode(200)
+            .body(matchesJsonSchemaInClasspath("testdata/userUpdateData-Schema.json"));
+
+    // Print the status and message body of the response received from the server
+    System.out.println("Status received => " + response.getStatusLine());
+    System.out.println("Response body =>" + response.prettyPrint());
+  }
 }
