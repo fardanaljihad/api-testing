@@ -7,7 +7,7 @@ import io.restassured.http.ContentType;
 
 public class APIConfig {
     private static final String BASE_URI = "https://dummyapi.io/data/v1/";
-    private static final String API_KEY = "662e3d5cbb70a7770c259497";
+    private static final String API_KEY = "6637405060f3319dc7a47ca2";
 
     static {
         // Setting the baseURI globally for RestAssured
