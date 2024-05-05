@@ -4,6 +4,8 @@
 
 Project ini berisi script test untuk API dari situs web DummyAPI.
 
+<img src="https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white"> <img src="https://img.shields.io/badge/-Maven-C71A36?style=flat&logo=apache-maven&logoColor=white"> <img src="https://img.shields.io/badge/-Postman-FF6C37?style=flat&logo=postman&logoColor=white"> <img src="https://img.shields.io/badge/REST%20Assured-6DB33F?style=flat&logo=rest-assured&logoColor=white">
+
 ## Project Structure
 
 Berikut ini adalah struktur direktori untuk api testing menggunakan Maven dan Rest Assured.
