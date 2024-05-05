@@ -2,26 +2,17 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
-    "id": {
+    "title": {
       "type": "string"
     },
-    "title": {
-      "type": "string",
-      "enum": ["mr", "ms", "mrs", "miss", "dr", ""]
-    },
     "firstName": {
-      "type": "string",
-      "minLength": 2,
-      "maxLength": 50
+      "type": "string"
     },
     "lastName": {
-      "type": "string",
-      "minLength": 2,
-      "maxLength": 50
+      "type": "string"
     },
     "gender": {
-      "type": "string",
-      "enum": ["male", "female", "other", ""]
+      "type": "string"
     },
     "email": {
       "type": "string",
@@ -29,15 +20,7 @@
     },
     "dateOfBirth": {
       "type": "string",
-      "format": "date-time",
-      "minimum": "1900-01-01T00:00:00Z",
-      "maximum": "now"
-    },
-    "registerDate": {
-      "type": "string"
-    },
-    "phone": {
-      "type": "string"
+      "format": "date-time"
     },
     "picture": {
       "type": "string",
@@ -47,29 +30,29 @@
       "type": "object",
       "properties": {
         "street": {
-          "type": "string",
-          "minLength": 5,
-          "maxLength": 100
+          "type": "string"
         },
         "city": {
-          "type": "string",
-          "minLength": 2,
-          "maxLength": 30
+          "type": "string"
         },
         "state": {
-          "type": "string",
-          "minLength": 2,
-          "maxLength": 30
+          "type": "string"
         },
         "country": {
-          "type": "string",
-          "minLength": 2,
-          "maxLength": 30
+          "type": "string"
         },
         "timezone": {
           "type": "string"
         }
       }
+    },
+    "registerDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updateDate": {
+      "type": "string",
+      "format": "date-time"
     }
   }
 }
