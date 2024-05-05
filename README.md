@@ -2,7 +2,7 @@
 
 ## Overview Project
 
-Proyek ini berisi kumpulan skrip pengujian yang dirancang khusus untuk menguji API dari situs web DummyAPI, yaitu Program User Controller. Skrip-skrip ini menggunakan teknologi-teknologi seperti Maven, Rest Assured, dan JUnit untuk memastikan fungsi API yang tepat dan respons yang diharapkan dari setiap endpoint.
+Proyek ini berisi kumpulan skrip pengujian yang dirancang khusus untuk menguji API dari situs web DummyAPI, yaitu Program User Controller. Proyek ini menggunakan teknologi-teknologi seperti Maven, Rest Assured, dan JUnit untuk memastikan fungsi API yang tepat dan respons yang diharapkan dari setiap endpoint.
 
 <img src="https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white"> <img src="https://img.shields.io/badge/-Maven-C71A36?style=flat&logo=apache-maven&logoColor=white"> <img src="https://img.shields.io/badge/-Postman-FF6C37?style=flat&logo=postman&logoColor=white"> <img src="https://img.shields.io/badge/REST%20Assured-6DB33F?style=flat&logo=rest-assured&logoColor=white">
 
