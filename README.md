@@ -24,14 +24,16 @@ api-testing/
 
 - **src/ :** Direktori tempat source code proyek disimpan. Terbagi menjadi dua sub-direktori:
 
-  - **main/java/kelompok/a6/maven/ :** Source code proyek disimpan di direktori ini, tetapi ini tidak digunakan dalam proyek ini.
-  - **test/java/kelompok/a6/maven/ :** Direktori ini berisi source code (unit test) untuk memastikan fungsi api sesuai harapan.
+  - **main/java/com/a6/apitesting/maven/ :** Source code proyek disimpan di direktori ini, tetapi ini tidak digunakan dalam proyek ini.
+  - **test/java/com/a6/apitesting/maven/ :** Direktori ini berisi source code (unit test) untuk memastikan fungsi api sesuai harapan.
 
 - **target/ :** Direktori ini dihasilkan oleh Maven saat proyek dikompilasi. Berisi file-file hasil kompilasi seperti file bytecode, file JAR, dan hasil pembuatan lainnya.
 
 - **.gitignore :** File ini berisi daftar file dan direktori yang diabaikan oleh Git saat proses pelacakan perubahan (version control), berguna untuk menyimpan file-file sementara atau hasil kompilasi.
 
 - **pom.xml :** Ini adalah file konfigurasi utama untuk proyek Maven. Di dalamnya, ditentukan dependensi proyek, pengaturan pembuatan, konfigurasi plugin, dan informasi proyek lainnya seperti nama, versi, dan deskripsi.
+
+## List Test Case
 
 | No  | Test Case Name                                                            | Modul Test Name                               |
 | :-- | :------------------------------------------------------------------------ | :-------------------------------------------- |
