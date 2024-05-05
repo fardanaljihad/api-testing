@@ -1,5 +1,21 @@
-# API Testing
+Judul
+<br><br>
+Deskripsi.
 
+<img src="https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white"> <img src="https://img.shields.io/badge/-Maven-C71A36?style=flat&logo=apache-maven&logoColor=white"> <img src="https://img.shields.io/badge/-Postman-FF6C37?style=flat&logo=postman&logoColor=white"> <img src="https://img.shields.io/badge/REST%20Assured-6DB33F?style=flat&logo=rest-assured&logoColor=white">
+
+```bash
+program-kalkulator/
+├── src/
+├   ├── main/java/kelompok/a6/maven/
+├   ├   └── App.java
+├   └── test/java/kelompok/a6/maven/
+├       └── AppTest.java
+├── target/
+├── .gitignore
+├── pom.xml
+└── README.md
+```
 
 | No  | Test Case Name                                                    | Modul Test Name                       |
 | :-- | :---------------------------------------------------------------- | :------------------------------------ |
