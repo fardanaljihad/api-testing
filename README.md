@@ -35,6 +35,28 @@ api-testing/
 
 - **pom.xml :** Ini adalah file konfigurasi utama untuk proyek Maven. Di dalamnya, ditentukan dependensi proyek, pengaturan pembuatan, konfigurasi plugin, dan informasi proyek lainnya seperti nama, versi, dan deskripsi.
 
+## Prerequisites
+1. Install Java (JDK)
+2. Install Maven
+3. Install IDE (example: Visual Studio Code) 
+
+## How to run Program
+com.a6.apitesting.maven;
+1. Clone Project
+```shell
+git clone https://github.com/fardanaljihad/api-testing.git
+```
+2. Open Project on IDE
+3. Open Terminal on IDE
+4. Install Dependencies
+```shell
+mvn install
+```
+5. Build Program
+```shell
+mvn package
+```
+
 ## List Test Case
 
 | No  | Test Case Name                                                            | Modul Test Name                               |
