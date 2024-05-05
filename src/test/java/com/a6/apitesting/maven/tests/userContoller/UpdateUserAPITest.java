@@ -14,7 +14,7 @@ import org.junit.Test;
 
 public class UpdateUserAPITest {
 
-  private static final String userId = "662e6ac81846fb03a2d55040";
+  private static final String USER_ID = "662e6ac81846fb03a2d55040";
   
   // Test case to update user with the user ID parameter empty. TC04
   @Test
@@ -44,7 +44,7 @@ public class UpdateUserAPITest {
     Response response = RestAssured.given()
                                     .spec(APIConfig.getDefaultRequestSpecification())
                                     .body(jsonBody)
-                                    .put("/user/" + userId);
+                                    .put("/user/" + USER_ID);
     // Now validate the response
     response.then()
             .assertThat()
@@ -64,7 +64,7 @@ public class UpdateUserAPITest {
     Response response = RestAssured.given()
                                     .spec(APIConfig.getDefaultRequestSpecification())
                                     .body(jsonBody)
-                                    .put("/user/" + userId);
+                                    .put("/user/" + USER_ID);
     // Now validate the response
     response.then()
             .assertThat()
